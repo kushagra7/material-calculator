@@ -38,7 +38,7 @@ const EditMaterial = () => {
 
     return (
         <div className='card border-0 shadow'>
-            <div className = "card-header">Edit Contact</div>
+            <div className = "card-header">Edit Material</div>
             <div className = "card-body">
             <form onSubmit={(e) => onUpdateContact(e)}>
                     <div className='form-group'>

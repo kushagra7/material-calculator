@@ -14,13 +14,15 @@ function App() {
         <div className="App">
           <div class="container">
             <div class="row">
-              <div class="col-sm-8"><Materials /></div>
-              <div class="col-sm-4"><AddMaterial/></div>
+              <div class="col-sm-4"><Materials /></div>
+              <div class="col-sm-6"><AddMaterial/></div>
             </div>
             <div class='row'>
+            <div class="col-sm-4">
               <Switch>
                 <Route exact path='/contacts/edit/:id' component={EditMaterial} />
               </Switch>
+              </div>
             </div>
           </div>
         </div>

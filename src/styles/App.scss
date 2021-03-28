@@ -1,9 +1,11 @@
-.actions{
+#actions{
   opacity: 0;
-}
+  cursor: pointer;
 
-tr:hover .actions{
-  opacity: 1;
+  &:hover{
+    opacity: 1;
+    cursor: pointer;
+  }
 }
 
 tbody td a {
@@ -12,4 +14,13 @@ tbody td a {
   &:hover{
       color: #111;
   }
+}
+
+.top-buffer { 
+  padding-top:5px;
+  padding-bottom: 5px;
+}
+
+.icon-color{
+  color:#fbc02d;
 }

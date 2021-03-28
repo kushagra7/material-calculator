@@ -10,18 +10,6 @@ export default function Materials() {
         <div>
             <table class="table shadow">
                 <thead>
-                    <tr>
-                        <th scope="col">
-                            <div className="custom-control custom-checkbox">
-                                <input type="checkbox" className="custom-control-input" />
-                                <label className="custom-control-label"></label>
-                            </div>
-                        </th>
-                        <th>Name</th>
-                        <th>Phone</th>
-                        <th>Email</th>
-                        <th>Actions</th>
-                    </tr>
                 </thead>
                 <tbody>
                     {
