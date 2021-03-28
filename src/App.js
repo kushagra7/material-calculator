@@ -11,8 +11,11 @@ function App() {
   return (
     <Provider store={store}>
       <Router>
-        <div className="App">
+        <div className="App text-white">
           <div class="container">
+          <div class="row">
+            <div class="col"> <h2> Materials</h2></div>
+          </div>
             <div class="row">
               <div class="col-sm-4"><Materials /></div>
               <div class="col-sm-6"><AddMaterial/></div>
