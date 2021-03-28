@@ -1,9 +1,9 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
-import Material from './Material'
+import Material from './Material';
 
 export default function Materials() {
-    const materials = useSelector(state => state.materials);
+    const materials = useSelector(state => state.contact.contacts);
     console.log(materials);
 
     return (
@@ -25,9 +25,9 @@ export default function Materials() {
                 </thead>
                 <tbody>
                     {
-                        // materials.map(materials => (
-                        //   <Material />
-                        // ))
+                        materials.map(material => (
+                            <Material material={material} key={material.id}/>
+                            ))
                     }
                 </tbody>
             </table>

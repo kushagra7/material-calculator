@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../styles/App.scss';
-// import { Link } from 'react-router-dom';
-// import {deleteContact} from '../../actions/contactAction';
+import { Link } from 'react-router-dom';
+import {deleteContact} from '../../redux/actions/materialAction';
 import {useDispatch} from 'react-redux';
 
 const Material = ({material}) => {
@@ -19,9 +19,9 @@ const Material = ({material}) => {
             <td>{phone}</td>
             <td>{email}</td>
             <td className="actions"> 
-                {/* <Link to={`/contacts/edit/${id}`}>
+                <Link to={`/contacts/edit/${id}`}>
                     <span className="material-icons mr-2" >edit</span>
-                </Link> */}
+                </Link>
                     {/* <span 
                     className="material-icons text-danger" 
                     onClick={()=>dispatch(deleteContact(id))}>  remove_circle</span> */}
