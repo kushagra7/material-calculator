@@ -8,7 +8,7 @@ const Material = ({ material }) => {
     const dispatch = useDispatch();
     const { name, phone, email, id } = material;
     return (
-        <div class="container bg-dark text-white">
+        <div class="container card-color text-white">
             <div class="row top-buffer" >
                 <div class="col-xs-2">
                     <div class="col-sm-4">
