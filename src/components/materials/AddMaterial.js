@@ -11,23 +11,23 @@ const AddMaterial = () => {
     const [cost, setCost] = useState("");
     const [color, setColor] = useState("#1bcbf2");
 
-    const createContact = e => {
+    const createMaterial = e => {
         e.preventDefault();
-        const new_contact = {
+        const new_material = {
             id: shortid.generate(),
             item: item,
             volume: volume,
             cost: cost,
             color: color
         }
-        console.log(new_contact);
-        dispatch(addMaterial(new_contact));
+        console.log(new_material);
+        dispatch(addMaterial(new_material));
     }
 
     return (
         <div className='card card-color text-white border-0 shadow'>
             <div className="card-body">
-                <form onSubmit={(e) => createContact(e)}>
+                <form onSubmit={(e) => createMaterial(e)}>
                     <div class="row">
                         <div class="col">
                             <div className='form-group'>

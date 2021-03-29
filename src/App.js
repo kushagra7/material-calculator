@@ -21,9 +21,9 @@ function App() {
               <div class="col-8"><AddMaterial /></div>
             </div>
             <div class='row'>
-              <div class="col-sm-7">
+              <div class="col-sm-5">
                 <Switch>
-                  <Route exact path='/contacts/edit/:id' component={EditMaterial} />
+                  <Route exact path='/materials/edit/:id' component={EditMaterial} />
                 </Switch>
                 <br/>
               </div>

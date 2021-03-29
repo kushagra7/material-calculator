@@ -26,7 +26,7 @@ const Material = ({ material }) => {
                     <div class="col-xs-12">Cost : {cost} $</div>
                 </div>
                 <div class="col-xs-2 ml-auto mr-3" id="actions">
-                    <Link to={`/contacts/edit/${id}`}>
+                    <Link to={`/materials/edit/${id}`}>
                         <span className="material-icons mr-2 icon-color">edit</span>
                     </Link>
                     <span className="material-icons text-danger"
