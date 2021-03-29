@@ -17,8 +17,8 @@ function App() {
             <div class="col"> <h2> Materials</h2></div>
           </div>
             <div class="row">
-              <div class="col-sm-4"><Materials /></div>
-              <div class="col-sm-6"><AddMaterial/></div>
+              <div class="col-4"><Materials /></div>
+              <div class="col-8"><AddMaterial/></div>
             </div>
             <div class='row'>
             <div class="col-sm-4">

@@ -8,14 +8,19 @@ const AddMaterial = () => {
     const [name, setName] = useState("");
     const [phone, setPhone] = useState("");
     const [email, setEmail] = useState("");
+    const [item, setItem] = useState("");
+    const [volume, setVolume] = useState("");
+    const [cost, setCost] = useState("");
+    const [color, setColor] = useState("#1bcbf2");
 
     const createContact = e => {
         e.preventDefault();
         const new_contact = {
             id: shortid.generate(),
-            name: name,
-            phone: phone,
-            email: email,
+            item: item,
+            volume: volume,
+            cost: cost,
+            color : color
         }
         console.log(new_contact);
         dispatch(addContact(new_contact));
@@ -34,8 +39,8 @@ const AddMaterial = () => {
                                     type='text'
                                     className='form-control'
                                     placeholder='New Material'
-                                    value={name}
-                                    onChange={(e) => setName(e.target.value)}
+                                    value={item}
+                                    onChange={(e) => setItem(e.target.value)}
                                 />
                             </div>
                         </div>
@@ -44,7 +49,12 @@ const AddMaterial = () => {
                                 <h6>Color</h6>
                                 <div>
                                 <row>
-                                <input className="color-picker" type='color' />
+                                <input 
+                                    className="color-picker" 
+                                    type='color' 
+                                    value={color}
+                                    onChange={(e) => setColor(e.target.value)}
+                                />
                                 </row>
                                </div>
                                </div>

@@ -6,34 +6,36 @@ import { useDispatch } from 'react-redux';
 
 const Material = ({ material }) => {
     const dispatch = useDispatch();
-    const { name, phone, email, id } = material;
+    const { id, item, volume, cost, color } = material;
     return (
         <div class="container card-color text-white">
             <div class="row top-buffer" >
                 <div class="col-xs-2">
                     <div class="col-sm-4">
-                        <div className="custom-control custom-checkbox">
-                            <input type="checkbox" className="custom-control-input" />
-                            <label className="custom-control-label"></label>
-                        </div>
+                        <input
+                            disabled
+                            className="color-picker"
+                            type='color'
+                            value={color}
+                        />
                     </div>
                 </div>
                 <div class="col-xs-8">
-                    <div class="col-xs-12">{name}</div>
-                    <div class="col-xs-12">{phone}</div>
+                    <div class="col-xs-12">{item}</div>
+                    <div class="col-xs-12">{volume} m<sup>3</sup></div>
                 </div>
                 <div class="col-xs-2 ml-auto mr-3" id="actions">
-                        <Link to={`/contacts/edit/${id}`}>
-                            <span className="material-icons mr-2 icon-color">edit</span>
-                        </Link>
-                        <span
-                            className="material-icons text-danger"
-                            onClick={() => dispatch(deleteContact(id))}>  remove_circle
+                    <Link to={`/contacts/edit/${id}`}>
+                        <span className="material-icons mr-2 icon-color">edit</span>
+                    </Link>
+                    <span
+                        className="material-icons text-danger"
+                        onClick={() => dispatch(deleteContact(id))}>  remove_circle
                         </span>
-                    </div>
-                
+                </div>
+
             </div>
-            
+
         </div>
     )
 }
