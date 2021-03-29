@@ -5,7 +5,7 @@ const initialState = {
         [
             {
                 "id": 1,
-                "item": "Table",
+                "item": "BackPack",
                 "volume": "4",
                 "cost": 20, 
                 "color":"#e6b105",
@@ -26,14 +26,14 @@ const initialState = {
             },
             {
                 "id": 4,
-                "item": "laptop",
+                "item": "iPad",
                 "volume": "600",
                 "cost": 200, 
                 "color":"#1BECA0",
             },
             {
                 "id": 5,
-                "item": "car",
+                "item": "Tickets",
                 "volume": "20000",
                 "cost": 500, 
                 "color":"#56D4FF",
