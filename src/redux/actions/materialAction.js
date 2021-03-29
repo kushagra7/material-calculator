@@ -18,7 +18,7 @@ export const updateMaterial = (contact) => ({
 })
 
 //delete contact action
-export const deleteContact = (id) => ({
+export const deleteMaterial = (id) => ({
     type: DELETE_MATERIAL,
     payload : id
 })
