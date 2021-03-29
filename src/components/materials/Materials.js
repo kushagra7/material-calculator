@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import Material from './Material';
 
 export default function Materials() {
-    const materials = useSelector(state => state.contact.contacts);
+    const materials = useSelector(state => state.material.contacts);
     // console.log(materials);
     var totalCost = 0;
 

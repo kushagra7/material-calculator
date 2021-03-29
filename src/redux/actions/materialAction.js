@@ -1,24 +1,24 @@
-import {CREATE_CONTACT, GET_CONTACT, UPDATE_CONTACT, DELETE_CONTACT} from '../constant/types' 
+import {CREATE_MATERIAL, GET_MATERIAL, UPDATE_MATERIAL, DELETE_MATERIAL} from '../constant/types' 
 
-export const addContact = (contact) =>({
-        type: CREATE_CONTACT,
+export const addMaterial = (contact) =>({
+        type: CREATE_MATERIAL,
         payload: contact,
 });
 
 //get contact action
 export const getContact = (id) => ({
-    type : GET_CONTACT,
+    type : GET_MATERIAL,
     payload : id, 
 })
 
 //update contact action
 export const updateContact = (contact) => ({
-    type : UPDATE_CONTACT,
+    type : UPDATE_MATERIAL,
     payload : contact, 
 })
 
 //delete contact action
 export const deleteContact = (id) => ({
-    type: DELETE_CONTACT,
+    type: DELETE_MATERIAL,
     payload : id
 })

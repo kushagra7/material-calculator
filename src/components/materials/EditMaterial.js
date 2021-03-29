@@ -7,9 +7,7 @@ const EditMaterial = () => {
     const dispatch = useDispatch();
     let history = useHistory();
     //in reducer we have contact for full reducer
-    const contact = useSelector(state => state.contact.contact);
-    const [name, setName] = useState("");
-    const [phone, setPhone] = useState("");
+    const contact = useSelector(state => state.material.contact);
     const [email, setEmail] = useState("");
 
     const [item, setItem] = useState("");
@@ -133,7 +131,7 @@ const EditMaterial = () => {
                     <br />
                     <div class='row'>
                         <div class='col'>
-                            <button id="btn" className='btn btn-primary' type='submit'> Update Material</button>
+                            <button id="btn" className='btn btn-warning' type='submit'> Update Material</button>
                         </div>
                     </div>
                 </form>

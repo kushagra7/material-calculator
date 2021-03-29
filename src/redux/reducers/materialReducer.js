@@ -1,4 +1,4 @@
-import {CREATE_CONTACT, GET_CONTACT, UPDATE_CONTACT, DELETE_CONTACT} from '../constant/types' 
+import {CREATE_MATERIAL, GET_MATERIAL, UPDATE_MATERIAL, DELETE_MATERIAL} from '../constant/types' 
 
 const initialState = {
     contacts:
@@ -39,18 +39,17 @@ const initialState = {
                 "color":"#56D4FF",
             },
         ],
-    contact:null,
 }
 
 export const materialReducer = (state = initialState, action) => {
     switch (action.type) {
-        case CREATE_CONTACT : 
+        case CREATE_MATERIAL : 
         return{
             ...state,
             contacts : [action.payload,...state.contacts]
         };
          
-        case GET_CONTACT : 
+        case GET_MATERIAL : 
         let arr = state.contacts.filter((contact) => contact.id == action.payload);
         arr = arr.values();
         for(let val of arr){
@@ -61,7 +60,7 @@ export const materialReducer = (state = initialState, action) => {
             contact : arr,
         };
 
-        case UPDATE_CONTACT:
+        case UPDATE_MATERIAL:
             return{
                 ...state,
                 contacts : state.contacts.map(contact => 
@@ -69,7 +68,7 @@ export const materialReducer = (state = initialState, action) => {
                     ),
             };
 
-        case DELETE_CONTACT:
+        case DELETE_MATERIAL:
             return{
                 ...state,
                 contacts : state.contacts.filter((contact) => contact.id != action.payload),

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
-import { addContact } from '../../redux/actions/materialAction'
+import { addMaterial } from '../../redux/actions/materialAction'
 import shortid from 'shortid';
 
 const AddMaterial = () => {
@@ -21,7 +21,7 @@ const AddMaterial = () => {
             color: color
         }
         console.log(new_contact);
-        dispatch(addContact(new_contact));
+        dispatch(addMaterial(new_contact));
     }
 
     return (

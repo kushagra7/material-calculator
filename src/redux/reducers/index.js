@@ -3,5 +3,5 @@ import { materialReducer } from "../reducers/materialReducer";
 
 
 export default combineReducers({
-    contact:materialReducer,
+    material:materialReducer,
 });
