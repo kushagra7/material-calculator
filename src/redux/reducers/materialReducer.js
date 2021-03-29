@@ -1,3 +1,5 @@
+/* eslint eqeqeq: 0 */
+
 import {CREATE_MATERIAL, GET_MATERIAL, UPDATE_MATERIAL, DELETE_MATERIAL} from '../constant/types' 
 
 const initialState = {

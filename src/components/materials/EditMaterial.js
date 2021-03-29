@@ -24,6 +24,7 @@ const EditMaterial = () => {
             setColor(material.color)
         }
         dispatch(getMaterial(id))
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [material]);
 
     const onUpdateMaterial = (e) => {
