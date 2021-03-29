@@ -5,8 +5,6 @@ import shortid from 'shortid';
 
 const AddMaterial = () => {
     const dispatch = useDispatch();
-    const [name, setName] = useState("");
-    const [phone, setPhone] = useState("");
     const [email, setEmail] = useState("");
     const [item, setItem] = useState("");
     const [volume, setVolume] = useState("");
@@ -84,7 +82,7 @@ const AddMaterial = () => {
                                 <div >
                                     <select
                                         className="browser-default custom-select"
-                                        onChange={(e) => setCost(e.target.value)}
+                                        onChange={(e) => setCost(parseInt(e.target.value))}
                                     >
                                         <option>0 $</option>
                                         <option value="100">100 $</option>

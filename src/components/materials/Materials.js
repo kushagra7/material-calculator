@@ -4,7 +4,12 @@ import Material from './Material';
 
 export default function Materials() {
     const materials = useSelector(state => state.contact.contacts);
-    console.log(materials);
+    // console.log(materials);
+    var totalCost = 0;
+
+    materials.map(e => (
+        totalCost += e.cost
+    ))
 
     return (
         <div>
@@ -14,11 +19,17 @@ export default function Materials() {
                 <tbody>
                     {
                         materials.map(material => (
-                            <Material material={material} key={material.id}/>
-                            ))
+                            <Material material={material} key={material.id} />
+                        ))
                     }
                 </tbody>
             </table>
+
+            <div class="row ">
+                <div class="col">
+                    <p class="text-white">Total Cost : {totalCost} $</p>
+                </div>
+            </div>
         </div>
     )
 }

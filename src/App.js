@@ -13,18 +13,19 @@ function App() {
       <Router>
         <div className="App text-white">
           <div class="container">
-          <div class="row">
-            <div class="col"> <h2> Materials</h2></div>
-          </div>
+            <div class="row">
+              <div class="col"> <h1> Materials</h1><br/></div>
+            </div>
             <div class="row">
               <div class="col-4"><Materials /></div>
-              <div class="col-8"><AddMaterial/></div>
+              <div class="col-8"><AddMaterial /></div>
             </div>
             <div class='row'>
-            <div class="col-sm-4">
-              <Switch>
-                <Route exact path='/contacts/edit/:id' component={EditMaterial} />
-              </Switch>
+              <div class="col-sm-7">
+                <Switch>
+                  <Route exact path='/contacts/edit/:id' component={EditMaterial} />
+                </Switch>
+                <br/>
               </div>
             </div>
           </div>

@@ -22,7 +22,8 @@ const Material = ({ material }) => {
                 </div>
                 <div class="col-xs-8">
                     <div class="col-xs-12">{item}</div>
-                    <div class="col-xs-12">{volume} m<sup>3</sup></div>
+                    <div class="col-xs-12">Volume : {volume} m<sup>3</sup></div>
+                    <div class="col-xs-12">Cost : {cost} $</div>
                 </div>
                 <div class="col-xs-2 ml-auto mr-3" id="actions">
                     <Link to={`/contacts/edit/${id}`}>
@@ -33,9 +34,7 @@ const Material = ({ material }) => {
                         onClick={() => dispatch(deleteContact(id))}>  remove_circle
                         </span>
                 </div>
-
             </div>
-
         </div>
     )
 }
