@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import Material from './Material';
 
 export default function Materials() {
-    const materials = useSelector(state => state.material.contacts);
+    const materials = useSelector(state => state.material.materials);
     // console.log(materials);
     var totalCost = 0;
 
@@ -27,7 +27,7 @@ export default function Materials() {
 
             <div class="row ">
                 <div class="col">
-                    <p class="text-white">Total Cost : {totalCost} $</p>
+                    <h5 class="text-white">Total Cost : {totalCost} $</h5>
                 </div>
             </div>
         </div>

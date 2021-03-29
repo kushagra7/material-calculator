@@ -1,7 +1,7 @@
 import {CREATE_MATERIAL, GET_MATERIAL, UPDATE_MATERIAL, DELETE_MATERIAL} from '../constant/types' 
 
 const initialState = {
-    contacts:
+    materials:
         [
             {
                 "id": 1,
@@ -38,7 +38,7 @@ const initialState = {
                 "cost": 500, 
                 "color":"#56D4FF",
             },
-        ],
+        ]
 }
 
 export const materialReducer = (state = initialState, action) => {
@@ -46,32 +46,32 @@ export const materialReducer = (state = initialState, action) => {
         case CREATE_MATERIAL : 
         return{
             ...state,
-            contacts : [action.payload,...state.contacts]
+            materials : [action.payload,...state.materials]
         };
          
         case GET_MATERIAL : 
-        let arr = state.contacts.filter((contact) => contact.id == action.payload);
+        let arr = state.materials.filter((material) => material.id == action.payload);
         arr = arr.values();
         for(let val of arr){
             arr = val;
         }
         return{
             ...state,
-            contact : arr,
+            material : arr,
         };
 
         case UPDATE_MATERIAL:
             return{
                 ...state,
-                contacts : state.contacts.map(contact => 
-                    contact.id == action.payload.id ? action.payload : contact
+                materials : state.materials.map(material => 
+                    material.id == action.payload.id ? action.payload : material
                     ),
             };
 
         case DELETE_MATERIAL:
             return{
                 ...state,
-                contacts : state.contacts.filter((contact) => contact.id != action.payload),
+                materials : state.materials.filter((material) => material.id != action.payload),
             }
         
         default:

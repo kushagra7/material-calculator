@@ -6,8 +6,8 @@ import { useParams, useHistory } from 'react-router-dom';
 const EditMaterial = () => {
     const dispatch = useDispatch();
     let history = useHistory();
-    //in reducer we have contact for full reducer
-    const contact = useSelector(state => state.material.contact);
+    //in reducer we have material representing whole reducer for full reducer
+    const material = useSelector(state => state.material.material);
     const [email, setEmail] = useState("");
 
     const [item, setItem] = useState("");
@@ -17,26 +17,26 @@ const EditMaterial = () => {
     let { id } = useParams();
 
     useEffect(() => {
-        if (contact != null) {
-            setItem(contact.item)
-            setVolume(contact.volume)
-            setCost(contact.cost)
-            setColor(contact.color)
+        if (material != null) {
+            setItem(material.item)
+            setVolume(material.volume)
+            setCost(material.cost)
+            setColor(material.color)
         }
         dispatch(getMaterial(id))
-    }, [contact]);
+    }, [material]);
 
-    const onUpdateContact = (e) => {
+    const onUpdateMaterial = (e) => {
         e.preventDefault();
 
-        const update_contact = Object.assign(contact, {
+        const update_material = Object.assign(material, {
             item: item,
             volume: volume,
             cost: cost,
             color: color
         })
 
-        dispatch(updateMaterial(update_contact));
+        dispatch(updateMaterial(update_material));
         history.push('/')
     };
 
@@ -44,9 +44,9 @@ const EditMaterial = () => {
         <div className='card card-color border-0 shadow'>
             <div className="card-header">
                 <h4>Edit Material</h4>
-                </div>
+            </div>
             <div className="card-body">
-                <form onSubmit={(e) => onUpdateContact(e)}>
+                <form onSubmit={(e) => onUpdateMaterial(e)}>
                     <div class="row">
                         <div class="col">
                             <div className='form-group'>
