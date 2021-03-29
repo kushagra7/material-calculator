@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { getContact, updateContact } from '../../redux/actions/materialAction'
+import { getMaterial, updateMaterial } from '../../redux/actions/materialAction'
 import { useParams, useHistory } from 'react-router-dom';
 
 const EditMaterial = () => {
@@ -23,7 +23,7 @@ const EditMaterial = () => {
             setCost(contact.cost)
             setColor(contact.color)
         }
-        dispatch(getContact(id))
+        dispatch(getMaterial(id))
     }, [contact]);
 
     const onUpdateContact = (e) => {
@@ -36,7 +36,7 @@ const EditMaterial = () => {
             color: color
         })
 
-        dispatch(updateContact(update_contact));
+        dispatch(updateMaterial(update_contact));
         history.push('/')
     };
 

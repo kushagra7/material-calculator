@@ -6,13 +6,13 @@ export const addMaterial = (contact) =>({
 });
 
 //get contact action
-export const getContact = (id) => ({
+export const getMaterial = (id) => ({
     type : GET_MATERIAL,
     payload : id, 
 })
 
 //update contact action
-export const updateContact = (contact) => ({
+export const updateMaterial = (contact) => ({
     type : UPDATE_MATERIAL,
     payload : contact, 
 })
