@@ -20,7 +20,7 @@ const AddMaterial = () => {
             item: item,
             volume: volume,
             cost: cost,
-            color : color
+            color: color
         }
         console.log(new_contact);
         dispatch(addContact(new_contact));
@@ -48,16 +48,16 @@ const AddMaterial = () => {
                             <div>
                                 <h6>Color</h6>
                                 <div>
-                                <row>
-                                <input 
-                                    className="color-picker" 
-                                    type='color' 
-                                    value={color}
-                                    onChange={(e) => setColor(e.target.value)}
-                                />
-                                </row>
-                               </div>
-                               </div>
+                                    <row>
+                                        <input
+                                            className="color-picker"
+                                            type='color'
+                                            value={color}
+                                            onChange={(e) => setColor(e.target.value)}
+                                        />
+                                    </row>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="row">
@@ -65,11 +65,15 @@ const AddMaterial = () => {
                             <div className='form-group'>
                                 <h6>Volume(m<sup>3</sup>)</h6>
                                 <div>
-                                    <select className="browser-default custom-select">
-                                        <option>0</option>
-                                        <option value="1">Option 1</option>
-                                        <option value="2">Option 2</option>
-                                        <option value="3">Option 3</option>
+                                    <select
+                                        className="browser-default custom-select"
+                                        onChange={(e) => setVolume(e.target.value)}
+                                    >
+                                        <option>500</option>
+                                        <option value="10000">10000</option>
+                                        <option value="20000">20000</option>
+                                        <option value="30000">30000</option>
+                                        <option value="40000">40000</option>
                                     </select>
                                 </div>
                             </div>
@@ -78,11 +82,15 @@ const AddMaterial = () => {
                             <div class="form-group">
                                 <h6>Cost(USD per m<sup>3</sup>)</h6>
                                 <div >
-                                    <select className="browser-default custom-select">
-                                        <option>0.00</option>
-                                        <option value="1">Option 1</option>
-                                        <option value="2">Option 2</option>
-                                        <option value="3">Option 3</option>
+                                    <select
+                                        className="browser-default custom-select"
+                                        onChange={(e) => setCost(e.target.value)}
+                                    >
+                                        <option>0 $</option>
+                                        <option value="100">100 $</option>
+                                        <option value="500">500 $</option>
+                                        <option value="1000">1000 $</option>
+                                        <option value="5000">5000 $</option>
                                     </select>
                                 </div>
                             </div>
@@ -92,7 +100,7 @@ const AddMaterial = () => {
                         <div class="col">
                             <h6>Delivery Date</h6>
                             <div>
-                                <input 
+                                <input
                                     id="inputColor"
                                     type='date'
                                     className='form-control browser-default'
