@@ -8,8 +8,7 @@ const EditMaterial = () => {
     let history = useHistory();
     //in reducer we have material representing whole reducer for full reducer
     const material = useSelector(state => state.material.material);
-    const [email, setEmail] = useState("");
-
+    const [date, setDate] = useState("");
     const [item, setItem] = useState("");
     const [volume, setVolume] = useState("");
     const [cost, setCost] = useState("");
@@ -34,7 +33,8 @@ const EditMaterial = () => {
             item: item,
             volume: volume,
             cost: cost,
-            color: color
+            color: color,
+            date:date
         })
 
         dispatch(updateMaterial(update_material));
@@ -122,8 +122,8 @@ const EditMaterial = () => {
                                     id="inputColor"
                                     type='date'
                                     className='form-control browser-default'
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
+                                    value={date}
+                                    onChange={(e) => setDate(e.target.value)}
                                 />
                             </div>
                         </div>

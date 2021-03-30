@@ -3,9 +3,20 @@ import { useDispatch } from 'react-redux';
 import { addMaterial } from '../../redux/actions/materialAction'
 import shortid from 'shortid';
 
+/**
+ * Component for adding material to the materials list.
+ * 
+ * @component 
+ * @example 
+ * const item = "airPods"
+ * const volume = "2000"
+ * const cost =
+    * Renders a <AddMaterial /> component
+*/
+
 const AddMaterial = () => {
     const dispatch = useDispatch();
-    const [email, setEmail] = useState("");
+    const [date, setDate] = useState("");
     const [item, setItem] = useState("");
     const [volume, setVolume] = useState("");
     const [cost, setCost] = useState("");
@@ -18,9 +29,10 @@ const AddMaterial = () => {
             item: item,
             volume: volume,
             cost: cost,
-            color: color
+            color: color,
+            date : date,
         }
-        console.log(new_material);
+        //console.log(new_material);
         dispatch(addMaterial(new_material));
     }
 
@@ -67,7 +79,7 @@ const AddMaterial = () => {
                                         className="browser-default custom-select"
                                         onChange={(e) => setVolume(e.target.value)}
                                     >
-                                        <option>500</option>
+                                        <option>0</option>
                                         <option value="10000">10000</option>
                                         <option value="20000">20000</option>
                                         <option value="30000">30000</option>
@@ -81,7 +93,7 @@ const AddMaterial = () => {
                                 <h6>Cost(USD per m<sup>3</sup>)</h6>
                                 <div >
                                     <select
-                                        className="browser-default custom-select"
+                                        className="browser-default selectpicker custom-select"
                                         onChange={(e) => setCost(parseInt(e.target.value))}
                                     >
                                         <option>0 $</option>
@@ -102,8 +114,8 @@ const AddMaterial = () => {
                                     id="inputColor"
                                     type='date'
                                     className='form-control browser-default'
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
+                                    value={date}
+                                    onChange={(e) => setDate(e.target.value)}
                                 />
                             </div>
                         </div>

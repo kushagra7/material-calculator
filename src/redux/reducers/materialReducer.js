@@ -11,6 +11,7 @@ const initialState = {
                 "volume": "4",
                 "cost": 20, 
                 "color":"#e6b105",
+                "date":"2021-01-10"
             },
             {
                 "id": 2,
@@ -18,6 +19,7 @@ const initialState = {
                 "volume": "5",
                 "cost": 40, 
                 "color":"#F23D7A",
+                "date":"2020-05-15"
             },
             {
                 "id": 3,
@@ -25,6 +27,7 @@ const initialState = {
                 "volume": "400",
                 "cost": 100, 
                 "color":"#C6B9F1",
+                "date":"2018-08-15"
             },
             {
                 "id": 4,
@@ -32,6 +35,7 @@ const initialState = {
                 "volume": "600",
                 "cost": 200, 
                 "color":"#1BECA0",
+                "date":"2019-11-16"
             },
             {
                 "id": 5,
@@ -39,6 +43,7 @@ const initialState = {
                 "volume": "20000",
                 "cost": 500, 
                 "color":"#56D4FF",
+                "date":"2016-11-29"
             },
         ]
 }

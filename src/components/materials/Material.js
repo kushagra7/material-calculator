@@ -6,7 +6,7 @@ import { useDispatch } from 'react-redux';
 
 const Material = ({ material }) => {
     const dispatch = useDispatch();
-    const { id, item, volume, cost, color } = material;
+    const { id, item, volume, cost, color, date } = material;
     return (
         <div class="container card-color text-white">
             <div class="row top-buffer" >
@@ -24,6 +24,7 @@ const Material = ({ material }) => {
                     <div class="col-xs-12">{item}</div>
                     <div class="col-xs-12">Volume : {volume} m<sup>3</sup></div>
                     <div class="col-xs-12">Cost : {cost} $</div>
+                    <div class="col-xs-12">Date : {date} </div>
                 </div>
                 <div class="col-xs-2 ml-auto mr-3" id="actions">
                     <Link to={`/materials/edit/${id}`}>
