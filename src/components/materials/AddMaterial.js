@@ -30,7 +30,7 @@ const AddMaterial = () => {
             volume: volume,
             cost: cost,
             color: color,
-            date : date,
+            date: date,
         }
         //console.log(new_material);
         dispatch(addMaterial(new_material));
@@ -79,7 +79,7 @@ const AddMaterial = () => {
                                         className="browser-default custom-select"
                                         onChange={(e) => setVolume(e.target.value)}
                                     >
-                                        <option>0</option>
+                                        <option>Select</option>
                                         <option value="10000">10000</option>
                                         <option value="20000">20000</option>
                                         <option value="30000">30000</option>
@@ -96,7 +96,7 @@ const AddMaterial = () => {
                                         className="browser-default selectpicker custom-select"
                                         onChange={(e) => setCost(parseInt(e.target.value))}
                                     >
-                                        <option>0 $</option>
+                                        <option>Select</option>
                                         <option value="100">100 $</option>
                                         <option value="500">500 $</option>
                                         <option value="1000">1000 $</option>

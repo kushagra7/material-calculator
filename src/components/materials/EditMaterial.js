@@ -8,7 +8,7 @@ const EditMaterial = () => {
     let history = useHistory();
     //in reducer we have material representing whole reducer for full reducer
     const material = useSelector(state => state.material.material);
-    const [date, setDate] = useState("");
+    const [date, setDate] = useState("2021-01-10");
     const [item, setItem] = useState("");
     const [volume, setVolume] = useState("");
     const [cost, setCost] = useState("");
@@ -34,18 +34,19 @@ const EditMaterial = () => {
             volume: volume,
             cost: cost,
             color: color,
-            date:date
+            date: date
         })
 
         dispatch(updateMaterial(update_material));
         history.push('/')
     };
 
+    function refreshPage() {
+        window.location.reload();
+    }
+
     return (
         <div className='card card-color border-0 shadow'>
-            <div className="card-header">
-                <h4>Edit Material</h4>
-            </div>
             <div className="card-body">
                 <form onSubmit={(e) => onUpdateMaterial(e)}>
                     <div class="row">
@@ -87,7 +88,7 @@ const EditMaterial = () => {
                                         className="browser-default custom-select"
                                         onChange={(e) => setVolume(e.target.value)}
                                     >
-                                        <option>500</option>
+                                        <option>Select</option>
                                         <option value="10000">10000</option>
                                         <option value="20000">20000</option>
                                         <option value="30000">30000</option>
@@ -104,7 +105,7 @@ const EditMaterial = () => {
                                         className="browser-default custom-select"
                                         onChange={(e) => setCost(parseInt(e.target.value))}
                                     >
-                                        <option>0 $</option>
+                                        <option>Select</option>
                                         <option value="100">100 $</option>
                                         <option value="500">500 $</option>
                                         <option value="1000">1000 $</option>
@@ -132,7 +133,8 @@ const EditMaterial = () => {
                     <br />
                     <div class='row'>
                         <div class='col'>
-                            <button id="btn" className='btn btn-warning' type='submit'> Update Material</button>
+                            <button id="btn" className='btn btn-warning mb-2 mr-2' type='submit'> Update Material</button>
+                            <button id="btn" className='btn btn-primary mb-2 mr-2' onClick={refreshPage}> Refresh</button>
                         </div>
                     </div>
                 </form>
