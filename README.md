@@ -18,8 +18,6 @@ Implemented adding material button inside the component.
 5. All components are functional.
 6. Responsive design.
 
-Implemented adding material button inside the component.
-
 ### Available Scripts
 
 In the project directory, you can run:
