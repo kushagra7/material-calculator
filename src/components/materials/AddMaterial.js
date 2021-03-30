@@ -16,10 +16,10 @@ import shortid from 'shortid';
 
 const AddMaterial = () => {
     const dispatch = useDispatch();
-    const [date, setDate] = useState("");
+    const [date, setDate] = useState("2021-01-10");
     const [item, setItem] = useState("");
-    const [volume, setVolume] = useState("");
-    const [cost, setCost] = useState("");
+    const [volume, setVolume] = useState(0);
+    const [cost, setCost] = useState(0);
     const [color, setColor] = useState("#1bcbf2");
 
     const createMaterial = e => {

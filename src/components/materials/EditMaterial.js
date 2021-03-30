@@ -10,8 +10,8 @@ const EditMaterial = () => {
     const material = useSelector(state => state.material.material);
     const [date, setDate] = useState("2021-01-10");
     const [item, setItem] = useState("");
-    const [volume, setVolume] = useState("");
-    const [cost, setCost] = useState("");
+    const [volume, setVolume] = useState(0);
+    const [cost, setCost] = useState(0);
     const [color, setColor] = useState("#1bcbf2");
     let { id } = useParams();
 
@@ -21,6 +21,7 @@ const EditMaterial = () => {
             setVolume(material.volume)
             setCost(material.cost)
             setColor(material.color)
+            setDate(material.date)
         }
         dispatch(getMaterial(id))
         // eslint-disable-next-line react-hooks/exhaustive-deps
