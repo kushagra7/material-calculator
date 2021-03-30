@@ -42,7 +42,7 @@ const EditMaterial = () => {
     };
 
     function refreshPage() {
-        window.location.reload();
+        history.push('/')
     }
 
     return (
@@ -134,7 +134,7 @@ const EditMaterial = () => {
                     <div class='row'>
                         <div class='col'>
                             <button id="btn" className='btn btn-warning mb-2 mr-2' type='submit'> Update Material</button>
-                            <button id="btn" className='btn btn-primary mb-2 mr-2' onClick={refreshPage}> Refresh</button>
+                            <button id="btn" className='btn btn-primary mb-2 mr-2' onClick={refreshPage}> Cancel</button>
                         </div>
                     </div>
                 </form>
