@@ -6,10 +6,19 @@ This project was created using react & redux.
 
 https://determined-haibt-6514b8.netlify.app
 
-### `Tradeoffs :`
+### Tradeoffs :
 
-Implemented material adding button inside the component.
+Implemented adding material button inside the component.
 
+### Features :
+1. Material can be added from different types like color, text, date, dropdown.
+2. Materials can be edited once added to the materials list.
+3. Delete material
+4. Total cost of all the materials.
+5. All components are functional.
+6. Responsive design.
+
+Implemented adding material button inside the component.
 
 ### Available Scripts
 
